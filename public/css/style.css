@@ -1,0 +1,218 @@
+body{
+   
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction:  column;
+  min-height: 100vh;    
+ 
+}
+.container{
+    flex: 1;
+}
+
+
+ /*navbar*/
+ .navbar{
+    height: 5rem;
+    background-color: white;
+
+ }
+ .fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+ }
+ 
+ .nav-link{
+    color: #222222 !important;
+
+ }
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+ }
+
+.f-info-links a:hover{
+    text-decoration: underline;
+ }
+
+.f-info-links,.f-info-socials,.f-info-brand{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.f-info-socials i{
+   font-size: 1.2rem;
+   margin-right: 1rem;
+}
+
+.f-info{
+    height: 8rem;
+    background-color: #ebebeb;
+    text-align: center;;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/*cards */
+.listing-card{
+  border: none !important;
+  margin-bottom: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100%;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;  
+}
+.card-text p{
+    font-weight: 400 !important;
+    color: #222222;
+}
+.listing-link{
+    text-decoration: none;
+}
+/* 
+overlay */
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* show page */
+.slow-image{
+    height: 20vh;
+
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+.btns{
+    display: flex;
+}
+
+/* map styling */
+#map{
+    height: 400px;
+     width: 100vh;
+}
+
+/* ---------- Filters Styles ---------- */
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .filter {
+    text-align: center;
+    flex: 0 0 auto;
+    width: 80px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .filter:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .filter.active {
+    opacity: 1;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+  }
+
+  .filter i {
+    font-size: 1.2rem;
+  }
+
+  .filter p {
+    font-size: 0.6rem;
+    margin-top: 0.3rem;
+  }
+
+  @media (max-width: 576px) {
+    .filter {
+      width: 60px;
+    }
+
+    .filter i {
+      font-size: 1.2rem;
+    }
+
+    .filter p {
+      font-size: 0.65rem;
+    }
+  }
+
+  .tax-toggle {
+    font-weight: 700;
+    font-size: 17px;
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding-top: 3px;
+    height: 2.5rem;
+    margin-left: auto;
+    margin-right: 0.1rem;
+  }
+
+  .tax-info {
+    display: none;
+  }
+
+/* ---------- My Bookings Page Styles ---------- */
+
+.booking-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  height: 100%;
+}
+
+.booking-card:hover {
+  transform: translateY(-3px);
+}
+
+.booking-img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.booking-details {
+  padding: 1rem;
+}
+
+.booking-badge {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+  .booking-img {
+    height: 180px;
+  }
+}

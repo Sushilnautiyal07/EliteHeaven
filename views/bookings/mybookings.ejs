@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container mt-4">
+  <h2 class="mb-4">My Bookings</h2>
+
+  <% if (bookings.length === 0) { %>
+    <div class="alert alert-info">You haven't made any bookings yet.</div>
+    <a href="/listings" class="btn btn-success">Browse Listings</a>
+  <% } %>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <% bookings.forEach(booking => { %>
+      <div class="col">
+        <div class="booking-card bg-white">
+          <img src="<%= booking.listing.image.url %>" alt="Listing Image" class="booking-img" />
+          <div class="booking-details">
+            <h5 class="fw-bold"><%= booking.listing.title %></h5>
+            <p class="text-muted mb-1">
+              <i class="fa-solid fa-location-dot"></i> <%= booking.listing.location %>, <%= booking.listing.country %>
+            </p>
+            <p class="mb-1"><i class="fa-solid fa-calendar-days"></i> <b>From:</b> <%= booking.fromDate.toDateString() %></p>
+            <p class="mb-1"><b>To:</b> <%= booking.toDate.toDateString() %></p>
+            <p class="mb-2"><b>Total Price:</b> ₹ <%= booking.totalPrice.toLocaleString("en-IN") %></p>
+            <span class="badge bg-success booking-badge"><%= booking.paymentStatus %></span>
+            <form action="/bookings/<%= booking._id %>/cancel" method="POST" class="mt-2">
+            <button class="btn btn-danger">Cancel Booking</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</div>
