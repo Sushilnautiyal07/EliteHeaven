@@ -3,6 +3,12 @@
 EliteHeaven is a fullstack hotel booking and property listing platform.git  
 It includes user registration/login, property creation, image uploads, reviews, bookings, and payment support.
 
+## 🌐 Live Demo
+
+👉 [Click here to view the live site](https://eliteheaven.onrender.com/listings)
+
+
+
 ## 🛠️ Tech Stack
 - Node.js
 - Express.js
