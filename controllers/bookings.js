@@ -27,7 +27,7 @@ module.exports.booking=async (req, res) => {
       price_data: {
         currency: 'inr',
         product_data: { name: listing.title },
-        unit_amount: listing.price * 100
+        unit_amount: finalPrice * 100
       },
       quantity: days
     }],
